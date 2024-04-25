@@ -619,6 +619,12 @@ video {
   }
 }
 
+.appearance-none {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
 .bg-gray-200 {
   background-color: #edf2f7;
 }
