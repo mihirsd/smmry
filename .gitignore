@@ -1,8 +1,11 @@
-**/node_modules
-**/build
+**/.vscode
+
 **/venv
-**/static
-**/templates
 **/__pycache__
 
-**.sh
+**/node_modules
+**/build
+
+app/templates/src/css/main.css
+
+run.sh

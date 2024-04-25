@@ -31,9 +31,13 @@ def get_article_text(url):
     return text
 
 def get_summary(query):
+    print('Fetching Article URLS...')
     urls = get_news_urls(query)
+    print('Complete')
+    print('Extracting Article Text..')
     lines = [get_article_text(url) for url in urls]
-    print('Summarizing..')
+    print('Complete')
+    print('Summarizing...')
     summary = sumbasic.orig(lines, 300)
-    print('Summarization Complete')
+    print('Complete')
     return summary, urls
