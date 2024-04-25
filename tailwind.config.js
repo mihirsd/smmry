@@ -1,6 +1,10 @@
 module.exports = {
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        title: ["Cookie", "cursive"]
+      }
+    },
   },
   variants: {},
   plugins: [],
