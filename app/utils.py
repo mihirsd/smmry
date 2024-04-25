@@ -31,6 +31,7 @@ def get_article_text(url):
     return text
 
 def get_summary(query):
+    word_limit = 200
     print('Fetching Article URLS...')
     urls = get_news_urls(query)
     print('Complete')
@@ -38,6 +39,6 @@ def get_summary(query):
     lines = [get_article_text(url) for url in urls]
     print('Complete')
     print('Summarizing...')
-    summary = sumbasic.orig(lines, 300)
+    summary = sumbasic.orig(lines, word_limit)
     print('Complete')
-    return summary, urls
+    return summary, urls, word_limit

@@ -15,6 +15,7 @@
     "tailwindcss": "^1.2.0"
   },
   "scripts": {
+    "start": "npm run watch:css && react-scripts start",
     "dev": "npm run watch:css && react-scripts build",
     "build": "npm run build:css && react-scripts build",
     "test": "react-scripts test",
