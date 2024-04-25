@@ -39,15 +39,15 @@ def get_summary(query, word_limit):
     
     print('Fetching Article URLS...')
     urls = get_news_urls(query)
-    print('Done ✔')
+    print('Complete')
 
     print('Extracting Article Text...')
     lines = [get_article_text(url) for url in urls]
-    print('Done ✔')
+    print('Complete')
 
     print('Summarizing...')
     summary = sumbasic.orig(lines, word_limit)
-    print('Done ✔')
+    print('Complete')
 
     toc = time.perf_counter()
 
