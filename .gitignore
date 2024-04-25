@@ -1,6 +1,8 @@
 **/node_modules
 **/build
 **/venv
+**/static
+**/templates
 **/__pycache__
 
 **.sh
