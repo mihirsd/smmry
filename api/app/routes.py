@@ -12,4 +12,4 @@ def api():
     if request.method == 'POST':
         query = request.json['query']
         summary, urls = utils.get_summary(query)
-        return jsonify({ 'summary': summary, 'urls': urls})
+        return jsonify({'summary': summary, 'urls': urls})
