@@ -1,4 +1,4 @@
 import os
 
 class Config:
-    pass
+    NEWSAPIKEY = os.environ.get('NEWSAPIKEY')

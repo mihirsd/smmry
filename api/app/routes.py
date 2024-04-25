@@ -1,6 +1,7 @@
-from flask import request, render_template
+from flask import render_template, request, jsonify
 
 from app import app
+from app import utils
 
 @app.route('/')
 def index():
@@ -9,4 +10,6 @@ def index():
 @app.route('/api', methods=['POST'])
 def api():
     if request.method == 'POST':
-        return request.json
+        query = request.json['query']
+        summary, urls = utils.get_summary(query)
+        return jsonify({ 'summary': summary, 'urls': urls})
