@@ -1,4 +1,4 @@
-from flask import render_template
+from flask import request, render_template
 
 from app import app
 
@@ -6,6 +6,7 @@ from app import app
 def index():
     return render_template('index.html')
 
-@app.route('/api')
+@app.route('/api', methods=['POST'])
 def api():
-    return { 'message': 'Hello, World!' }
+    if request.method == 'POST':
+        return request.json
