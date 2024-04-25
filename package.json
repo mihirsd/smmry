@@ -19,7 +19,7 @@
     "postbuild": "rm -r api/templates && cp -r build api/templates",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build:css": "postcss src/assets/tailwind.css -o src/assets/main.css",
+    "build:css": "postcss src/assets/tailwind.css -o src/assets/main.css --env production",
     "watch:css": "postcss src/assets/tailwind.css -o src/assets/main.css"
   },
   "eslintConfig": {
@@ -36,5 +36,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^2.1.0"
   }
 }
