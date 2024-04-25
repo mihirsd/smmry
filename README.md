@@ -71,4 +71,4 @@ The application should run on port 5500 and can be accessed by going to http://l
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/mihir3k/smmry/glob/master/LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/mihir3k/smmry/blob/master/LICENSE.md) file for details
