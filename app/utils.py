@@ -15,6 +15,7 @@ def get_news_urls(query):
     payload = {
         'q': query,
         'pageSize': '5',
+        'source': 'google-news',
         'language': 'en',
     }
     result = requests.get(NEWSAPI_BASE_URL + 'everything', headers=headers, params=payload).json()
