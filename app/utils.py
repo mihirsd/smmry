@@ -1,5 +1,6 @@
-import requests
+import time
 
+import requests
 from newspaper import Article
 
 from app import app
@@ -31,14 +32,19 @@ def get_article_text(url):
     return text
 
 def get_summary(query):
-    word_limit = 200
-    print('Fetching Article URLS...')
+    word_limit = 300
+    tic = time.perf_counter()
+    print(f'\nQuery: \'{query}\', Word Limit: {word_limit}')
+    print('Fetching Article URLS...', end=' ')
     urls = get_news_urls(query)
-    print('Complete')
-    print('Extracting Article Text..')
+    print('Done ✔')
+    print('Extracting Article Text...', end=' ')
     lines = [get_article_text(url) for url in urls]
-    print('Complete')
-    print('Summarizing...')
+    print('Done ✔')
+    print('Summarizing...', end=' ')
     summary = sumbasic.orig(lines, word_limit)
-    print('Complete')
-    return summary, urls, word_limit
+    print('Done ✔')
+    toc = time.perf_counter()
+    tc = f'{toc - tic:0.3f}'
+    print(f'Completed in {tc} seconds')
+    return summary, urls, word_limit, tc

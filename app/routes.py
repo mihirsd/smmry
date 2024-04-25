@@ -11,5 +11,5 @@ def index():
 def api():
     if request.method == 'POST':
         query = request.json['query']
-        summary, urls, words = utils.get_summary(query)
-        return jsonify({'summary': summary, 'urls': urls, 'words': words})
+        summary, urls, words, time = utils.get_summary(query)
+        return jsonify({'summary': summary, 'urls': urls, 'words': words, 'time': time})

@@ -14,7 +14,7 @@ function Summary(props) {
           </div>
           <div className="text-right">
             <p className="text-sm text-gray-500">
-              {data.words} words
+              {data.words} words ({data.time} seconds)
             </p>
           </div>
         </div>
