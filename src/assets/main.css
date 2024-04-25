@@ -3689,7 +3689,7 @@ video {
 }
 
 .font-title {
-  font-family: Cookie, sans-serif;
+  font-family: Cookie, cursive;
 }
 
 .font-hairline {
@@ -14000,7 +14000,7 @@ video {
   }
 
   .sm\:font-title {
-    font-family: Cookie, sans-serif;
+    font-family: Cookie, cursive;
   }
 
   .sm\:font-hairline {
@@ -24312,7 +24312,7 @@ video {
   }
 
   .md\:font-title {
-    font-family: Cookie, sans-serif;
+    font-family: Cookie, cursive;
   }
 
   .md\:font-hairline {
@@ -34624,7 +34624,7 @@ video {
   }
 
   .lg\:font-title {
-    font-family: Cookie, sans-serif;
+    font-family: Cookie, cursive;
   }
 
   .lg\:font-hairline {
@@ -44936,7 +44936,7 @@ video {
   }
 
   .xl\:font-title {
-    font-family: Cookie, sans-serif;
+    font-family: Cookie, cursive;
   }
 
   .xl\:font-hairline {
