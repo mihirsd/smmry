@@ -625,6 +625,10 @@ video {
           appearance: none;
 }
 
+.bg-white {
+  background-color: #fff;
+}
+
 .bg-gray-200 {
   background-color: #edf2f7;
 }
@@ -633,33 +637,56 @@ video {
   background-color: #fff;
 }
 
-.border-gray-200 {
-  border-color: #edf2f7;
+.border-gray-300 {
+  border-color: #e2e8f0;
 }
 
 .focus\:border-purple-500:focus {
   border-color: #9f7aea;
 }
 
-.rounded {
-  border-radius: 0.25rem;
+.rounded-lg {
+  border-radius: 0.5rem;
 }
 
 .border-2 {
   border-width: 2px;
 }
 
+.border {
+  border-width: 1px;
+}
+
+.block {
+  display: block;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
 .font-title {
   font-family: Cookie, cursive;
+}
+
+.font-semibold {
+  font-weight: 600;
 }
 
 .leading-tight {
   line-height: 1.25;
 }
 
-.mx-2 {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+.list-disc {
+  list-style-type: disc;
 }
 
 .mx-auto {
@@ -667,16 +694,32 @@ video {
   margin-right: auto;
 }
 
-.mt-16 {
-  margin-top: 4rem;
+.mt-4 {
+  margin-top: 1rem;
 }
 
 .max-w-4xl {
   max-width: 56rem;
 }
 
+.min-h-screen {
+  min-height: 100vh;
+}
+
 .focus\:outline-none:focus {
   outline: 0;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
 }
 
 .py-2 {
@@ -689,8 +732,44 @@ video {
   padding-right: 1rem;
 }
 
+.pb-2 {
+  padding-bottom: 0.5rem;
+}
+
+.shadow-xl {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-gray-600 {
+  color: #718096;
+}
+
 .text-gray-700 {
   color: #4a5568;
+}
+
+.text-gray-900 {
+  color: #1a202c;
+}
+
+.text-blue-700 {
+  color: #2b6cb0;
+}
+
+.text-purple-600 {
+  color: #805ad5;
 }
 
 .text-xl {
@@ -701,6 +780,22 @@ video {
   font-size: 4rem;
 }
 
+.antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .w-full {
   width: 100%;
+}
+
+.transform {
+  --transform-translate-x: 0;
+  --transform-translate-y: 0;
+  --transform-rotate: 0;
+  --transform-skew-x: 0;
+  --transform-skew-y: 0;
+  --transform-scale-x: 1;
+  --transform-scale-y: 1;
+  transform: translateX(var(--transform-translate-x)) translateY(var(--transform-translate-y)) rotate(var(--transform-rotate)) skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y));
 }
