@@ -31,20 +31,28 @@ def get_article_text(url):
         text = ''
     return text
 
-def get_summary(query):
-    word_limit = 300
+def get_summary(query, word_limit):
     tic = time.perf_counter()
+
     print(f'\nQuery: \'{query}\', Word Limit: {word_limit}')
-    print('Fetching Article URLS...', end=' ')
+    
+    print('Fetching Article URLS...')
     urls = get_news_urls(query)
     print('Done ✔')
-    print('Extracting Article Text...', end=' ')
+
+    print('Extracting Article Text...')
     lines = [get_article_text(url) for url in urls]
     print('Done ✔')
-    print('Summarizing...', end=' ')
+
+    print('Summarizing...')
     summary = sumbasic.orig(lines, word_limit)
     print('Done ✔')
+
     toc = time.perf_counter()
-    tc = f'{toc - tic:0.3f}'
-    print(f'Completed in {tc} seconds')
-    return summary, urls, word_limit, tc
+
+    return {
+        'summary': summary,
+        'urls': urls,
+        'words': word_limit,
+        'time': f'{toc - tic:0.3f}'
+    }

@@ -1,7 +1,6 @@
 from flask import render_template, request, jsonify
 
-from app import app
-from app import utils
+from app import app, utils
 
 @app.route('/')
 def index():
@@ -11,5 +10,6 @@ def index():
 def api():
     if request.method == 'POST':
         query = request.json['query']
-        summary, urls, words, time = utils.get_summary(query)
-        return jsonify({'summary': summary, 'urls': urls, 'words': words, 'time': time})
+        word_limit = request.json['word_limit']
+        result = utils.get_summary(query, word_limit)
+        return jsonify(result)

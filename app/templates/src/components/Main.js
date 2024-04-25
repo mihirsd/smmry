@@ -23,7 +23,8 @@ function Main() {
     const fetchData = async () => {
       if (query) {
         const res = await axios.post('/api', {
-          query: query
+          query: query,
+          word_limit: 150
         });
         setLoading(false);
         setHasData(true);
