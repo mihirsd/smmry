@@ -2,13 +2,14 @@ import requests
 
 from newspaper import Article
 
+from app import app
 from app import sumbasic
 
 NEWSAPI_BASE_URL = 'https://newsapi.org/v2/'
 
 def get_news_urls(query):
     headers = {
-        'X-API-Key': '417ff57724934af9b1dcbf1cb5f86caa'
+        'X-API-Key': app.config['NEWSAPIKEY']
     }
     payload = {
         'q': query,
