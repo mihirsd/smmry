@@ -65,9 +65,6 @@ $ ./run.sh
 
 The application should run on port 5500 and can be accessed by going to http://localhost:5500 in your web browser.
 
-## Authors
-
-* **Mihir Desai** - *Initial work* - [mihir3k](https://github.com/mihir3k)
 
 ## License
 
